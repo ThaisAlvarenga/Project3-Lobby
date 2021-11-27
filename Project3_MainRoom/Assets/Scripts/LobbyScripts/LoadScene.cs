@@ -19,7 +19,7 @@ public class LoadScene : MonoBehaviour
     void Start()
     {
         loadScene = false;
-        count = 1;
+        //count = 1;
         //tags = gameObject.tag; 
         //ctrl.canTransport = false;
     }
@@ -30,15 +30,26 @@ public class LoadScene : MonoBehaviour
         if (other.gameObject.CompareTag(tags))
         {
             //ctrl.canTransport = true;
-            if(loadScene)
+            if (loadScene)
+            {
                 SceneManager.LoadScene(destination, LoadSceneMode.Additive);
+                //loadScene = false;
+            }
+
             else if (!loadScene)
             {
-                SceneManager.UnloadSceneAsync(destination);
+               SceneManager.UnloadSceneAsync(destination);
             }
- 
             
         }
         
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+       // loadScene = !loadScene;
+       //if (loadScene)
+            //loadScene = false;
+        //SceneManager.UnloadSceneAsync(destination);
     }
 }
