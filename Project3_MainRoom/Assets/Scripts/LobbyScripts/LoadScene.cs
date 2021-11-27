@@ -11,21 +11,33 @@ public class LoadScene : MonoBehaviour
     // public GameObject gate;
 
     public string destination;
+    public string tags;
+    int count;
 
 
     // Start is called before the first frame update
     void Start()
     {
         loadScene = false;
+        count = 1;
+        //tags = gameObject.tag; 
         //ctrl.canTransport = false;
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Depression"))
+        loadScene = !loadScene;
+        if (other.gameObject.CompareTag(tags))
         {
             //ctrl.canTransport = true;
+            if(loadScene)
                 SceneManager.LoadScene(destination, LoadSceneMode.Additive);
+            else if (!loadScene)
+            {
+                SceneManager.UnloadSceneAsync(destination);
+            }
+ 
+            
         }
         
     }

@@ -134,7 +134,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62614
+  m_Name: pb_Mesh68470
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2809,6 +2809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueJewel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a87f6562a6b964f5696dbd86f2809c61, type: 3}
+      propertyPath: m_TagString
+      value: Depression
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a87f6562a6b964f5696dbd86f2809c61, type: 3}
 --- !u!1 &1805105084 stripped
@@ -3619,6 +3623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gateBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2142876d2dff4f4b9f0d514e9aa7c8a, type: 3}
+      propertyPath: m_TagString
+      value: Depression
+      objectReference: {fileID: 0}
     - target: {fileID: 7011295196447384154, guid: c2142876d2dff4f4b9f0d514e9aa7c8a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3766,7 +3774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019243853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.8, y: 8.35, z: -9.99}
+  m_LocalPosition: {x: -19.8, y: 9.5, z: -9.99}
   m_LocalScale: {x: 12.781614, y: 5.713978, z: 13.946805}
   m_Children: []
   m_Father: {fileID: 1634664402}
@@ -3794,18 +3802,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2019243853}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b2cbc0c98eae742819de40c29bf274, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ad1a40a60f164e0b935c81f6efcdef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadScene: 0
   destination: DepressionScene
-  canTransport: 0
 --- !u!43 &2030801120
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62728
+  m_Name: pb_Mesh68584
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
