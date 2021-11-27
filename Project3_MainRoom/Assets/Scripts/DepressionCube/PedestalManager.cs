@@ -4,38 +4,36 @@ using UnityEngine;
 
 public class PedestalManager : MonoBehaviour
 {
-    public Transform startPoint;
-    public Transform endPoint;
-    public float speed = 5.0f;
-    private float startTime;
-    private float flightDistance;
+    public GameObject projectile;
+    public float launchVelocity = 350f;
+
+    private Vector3 startPoint, endPoint;
+    private float lerp = 0, duration = 2;
 
     public Material passMaterial;
     public GameObject cube;
 
-    private void Start()
-    {
-        startTime = Time.time;
-        flightDistance = Vector3.Distance(startPoint.position, endPoint.position);
-    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Gem"))
+        if (!other.CompareTag("Pass"))
         {
-            ShootTheCube();
+            StartCoroutine(ShootTheCube(other.gameObject));
+            // ShootTheCube(other);
         }
-        else if (other.CompareTag("Pass"))
+        else
         {
-            cube.GetComponent<MeshRenderer>().material = passMaterial;
+            GetComponent<MeshRenderer>().material = passMaterial;
         }
     }
 
-    IEnumerator ShootTheCube()
+    IEnumerator ShootTheCube(GameObject other)
     {
-        float distanceFlied = (Time.time - startTime) * speed;
-        float flightFraction = distanceFlied / flightDistance;
-        transform.position = Vector3.Lerp(startPoint.position, endPoint.position, flightFraction);
+        other.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, launchVelocity, 0));
+        //startPoint = GameObject.Find("Gem").transform.position;
+        //endPoint = GameObject.Find("SpawnLocation").transform.position;
+        //lerp += Time.deltaTime / duration;
+        //other.transform.position = Vector3.Lerp(startPoint, endPoint, lerp);
         yield return null;
     }
 }

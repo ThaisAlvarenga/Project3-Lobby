@@ -11,6 +11,11 @@ TagManager:
   - Acceptance
   - Depression
   - Hand
+  - Gem
+  - Liquid
+  - Ring
+  - RealGem
+  - Pass
   layers:
   - Default
   - TransparentFX
