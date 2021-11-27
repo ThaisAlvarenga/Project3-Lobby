@@ -793,7 +793,6 @@ MonoBehaviour:
   projectile: {fileID: 2030075648}
   launchVelocity: 700
   passMaterial: {fileID: 2100000, guid: 98b12b7b681ad4295998e5c2ca5b81f4, type: 2}
-  cube: {fileID: 2030075648}
 --- !u!65 &1353080123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1140,6 +1139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebb404d022154a849113abce48cc288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blue: {fileID: 2100000, guid: 706fb1f512048b74db0a08faf56d9353, type: 2}
 --- !u!114 &1593229479
 MonoBehaviour:
   m_ObjectHideFlags: 0

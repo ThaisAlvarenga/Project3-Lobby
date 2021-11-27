@@ -14,6 +14,10 @@ public class CheckingContainerManager : MonoBehaviour
 
     private void Awake()
     {
+        if (GameObject.Find("PurpleJewelOriginal") != null)
+        {
+            Destroy(GameObject.Find("PurpleJewelOriginal"), 0.5f);
+        }
         fakesArray = new GameObject[numTotal];
         for (int i = 0; i < numTotal; i++)
         {
@@ -73,13 +77,13 @@ public class CheckingContainerManager : MonoBehaviour
             if (i == random)
             {
                 fakesArray[i].transform.GetChild(1).tag = "RealGem";
-                //fakesArray[i].transform.GetChild(1).GetComponent<MeshRenderer>().material = right;
+                fakesArray[i].transform.GetChild(1).GetComponent<MeshRenderer>().material = right;
 
             }
             else
             {
                 fakesArray[i].transform.GetChild(1).tag = "Untagged";
-               // fakesArray[i].transform.GetChild(1).GetComponent<MeshRenderer>().material = defaultMaterial;
+                fakesArray[i].transform.GetChild(1).GetComponent<MeshRenderer>().material = defaultMaterial;
             }
 
         }

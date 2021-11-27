@@ -16,7 +16,7 @@ public class GateController : MonoBehaviour
     public GameObject gate;
     bool active;
     public AudioSource openGate;
-
+    private int counter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +42,12 @@ public class GateController : MonoBehaviour
         if (args.interactor.gameObject.CompareTag("Hand")){
             active = true;
             gate.SetActive(active);
-            openGate.Play();
+            if (counter < 1)
+            {
+                openGate.Play();
+                counter++;
+            }
+            
 
             //Debug.Log("active");
         }
@@ -54,8 +59,8 @@ public class GateController : MonoBehaviour
 
     public void deactivate()
     {
-        active = false;
-        gate.SetActive(active);
+        //active = false;
+        //gate.SetActive(active);
         //bActive = false;
     }
 }
