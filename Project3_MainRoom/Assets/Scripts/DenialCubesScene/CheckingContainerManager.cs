@@ -28,7 +28,7 @@ public class CheckingContainerManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("RealGem"))
+        if (other.gameObject.CompareTag("RealGem") || other.gameObject.CompareTag("Bargain"))
         {
             gameObject.GetComponent<MeshRenderer>().material = right;
         }

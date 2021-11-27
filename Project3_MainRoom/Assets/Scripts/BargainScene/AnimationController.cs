@@ -14,30 +14,12 @@ public class AnimationController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Talk"))
+        if (other.CompareTag("Bargain"))
         {
             animator.SetBool("isTalking", true);
             StartCoroutine("NPCTalking");
         }
     }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    animator.SetBool("isTalking", true);
-    //}
-
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //    animator.SetBool("isTalking", false);
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.CompareTag("Talk"))
-    //    {
-    //        animator.SetBool("isTalking", false);
-    //    }
-    //}
 
     IEnumerator NPCTalking()
     {
