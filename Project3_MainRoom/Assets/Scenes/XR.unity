@@ -303,11 +303,19 @@ MonoBehaviour:
     m_Action:
       m_Name: Left Hand Snap Turn
       m_Type: 0
-      m_ExpectedControlType: 
+      m_ExpectedControlType: Vector2
       m_Id: e2aee478-402f-4651-8119-1bc446408823
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 5ddd79a3-196a-489f-87a9-5716c7809cd6
+        m_Path: <XRController>/primary2DAxis
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Left Hand Snap Turn
+        m_Flags: 0
     m_Reference: {fileID: 0}
   m_RightHandSnapTurnAction:
     m_UseReference: 0
@@ -318,7 +326,15 @@ MonoBehaviour:
       m_Id: 84ca9323-b63f-4d12-bf1d-d14b435fff7e
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: f6e6fa71-9449-4f95-9449-74781039ab9f
+        m_Path: <XRController>/primary2DAxis
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Hand Snap Turn
+        m_Flags: 0
     m_Reference: {fileID: 0}
 --- !u!850595691 &197156389
 LightingSettings:

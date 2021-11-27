@@ -448,7 +448,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41652
+  m_Name: pb_Mesh77636
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -824,7 +824,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741204707}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -838,11 +838,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 741204707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b2cbc0c98eae742819de40c29bf274, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ad1a40a60f164e0b935c81f6efcdef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: 
-  canTransport: 0
+  loadScene: 0
+  destination: AngerScene
+  tags: Anger
 --- !u!4 &889432178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c2142876d2dff4f4b9f0d514e9aa7c8a, type: 3}
@@ -1364,6 +1365,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a87f6562a6b964f5696dbd86f2809c61, type: 3}
       propertyPath: m_Name
       value: RedJewel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a87f6562a6b964f5696dbd86f2809c61, type: 3}
+      propertyPath: m_TagString
+      value: Anger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a87f6562a6b964f5696dbd86f2809c61, type: 3}
@@ -3773,7 +3778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2142876d2dff4f4b9f0d514e9aa7c8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.66
+      value: -35.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2142876d2dff4f4b9f0d514e9aa7c8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4335,7 +4340,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41768
+  m_Name: pb_Mesh77752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
