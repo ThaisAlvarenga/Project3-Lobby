@@ -16,6 +16,7 @@ TagManager:
   - Ring
   - RealGem
   - Pass
+  - Denial
   layers:
   - Default
   - TransparentFX
