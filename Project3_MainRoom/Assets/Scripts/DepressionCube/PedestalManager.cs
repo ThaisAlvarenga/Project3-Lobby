@@ -6,6 +6,7 @@ public class PedestalManager : MonoBehaviour
 {
     public GameObject projectile;
     public float launchVelocity = 350f;
+    public Material gray;
 
     public Material passMaterial;
     //public GameObject gem;
@@ -14,7 +15,7 @@ public class PedestalManager : MonoBehaviour
     {
         if (GameObject.Find("BlueJewel") != null)
         {
-            GameObject.Find("BlueJewel").transform.GetChild(0).GetComponent<MeshRenderer>().material.color = Color.black;
+            GameObject.Find("BlueJewel").transform.GetChild(0).GetComponent<MeshRenderer>().material = gray;
 
 
         }
@@ -36,7 +37,9 @@ public class PedestalManager : MonoBehaviour
 
     IEnumerator ShootTheCube(GameObject other)
     {
-        other.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, launchVelocity, 0));
+        var rand = Random.onUnitSphere;
+        rand.y = launchVelocity;
+        other.GetComponent<Rigidbody>().AddForce(rand);
         yield return null;
     }
 }

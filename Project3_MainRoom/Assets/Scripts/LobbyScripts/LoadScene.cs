@@ -12,37 +12,32 @@ public class LoadScene : MonoBehaviour
 
     public string destination;
     public string tags;
-    int count;
-
+    public string tag2;
 
     // Start is called before the first frame update
     void Start()
     {
-        loadScene = false;
-        //count = 1;
-        //tags = gameObject.tag; 
-        //ctrl.canTransport = false;
+        loadScene = true;
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        loadScene = !loadScene;
-        if (other.gameObject.CompareTag(tags))
+        
+        if (other.gameObject.CompareTag(tags) && loadScene)
         {
-            //ctrl.canTransport = true;
             if (loadScene)
             {
                 SceneManager.LoadScene(destination, LoadSceneMode.Additive);
-                //loadScene = false;
+                loadScene = false;
             }
-
-            else if (!loadScene)
-            {
-               SceneManager.UnloadSceneAsync(destination);
-            }
-            
         }
-        
+
+        else if (other.gameObject.CompareTag(tag2) && !loadScene)
+        {
+            SceneManager.UnloadSceneAsync(destination);
+            loadScene = true;
+        }
+
     }
 
     public void OnTriggerExit(Collider other)

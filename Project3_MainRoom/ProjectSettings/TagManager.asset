@@ -18,6 +18,8 @@ TagManager:
   - Pass
   - Denial
   - Talk
+  - bat
+  - XRRigCollider
   layers:
   - Default
   - TransparentFX
