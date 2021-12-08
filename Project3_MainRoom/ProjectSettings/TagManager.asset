@@ -21,6 +21,7 @@ TagManager:
   - bat
   - XRRigCollider
   - GreenGate
+  - Socket
   layers:
   - Default
   - TransparentFX
