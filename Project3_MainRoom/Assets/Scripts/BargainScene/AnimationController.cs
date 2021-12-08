@@ -6,6 +6,7 @@ public class AnimationController : MonoBehaviour
 {
     public GameObject NPC;
     Animator animator;
+    int count = 0;
 
     private void Awake()
     {
@@ -14,11 +15,16 @@ public class AnimationController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bargain"))
+        if (count == 0)
         {
-            animator.SetBool("isTalking", true);
-            StartCoroutine("NPCTalking");
+            if (other.CompareTag("Bargain"))
+            {
+                animator.SetBool("isTalking", true);
+                StartCoroutine("NPCTalking");
+            }
+            count++;
         }
+        
     }
 
     IEnumerator NPCTalking()

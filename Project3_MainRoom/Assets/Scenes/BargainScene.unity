@@ -699,8 +699,8 @@ GameObject:
   - component: {fileID: 1722659853}
   - component: {fileID: 1722659852}
   - component: {fileID: 1722659851}
-  - component: {fileID: 1722659850}
   - component: {fileID: 1722659854}
+  - component: {fileID: 1722659850}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1722659848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b76ab316b3904ab0a8f30c34e5a6b6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e7cd59686f2a48c6a010c6ce4c5be6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   right: {fileID: 2100000, guid: 98b12b7b681ad4295998e5c2ca5b81f4, type: 2}
@@ -825,7 +825,6 @@ GameObject:
   - component: {fileID: 2060161437}
   - component: {fileID: 2060161436}
   - component: {fileID: 2060161435}
-  - component: {fileID: 2060161434}
   m_Layer: 2
   m_Name: TalkingArea
   m_TagString: Untagged
@@ -833,18 +832,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2060161434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060161433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecc02f530b6e945cb99b8617611f0074, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2060161435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,7 +878,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5664
+  m_Name: pb_Mesh60990
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
