@@ -20,6 +20,7 @@ TagManager:
   - Talk
   - bat
   - XRRigCollider
+  - GreenGate
   layers:
   - Default
   - TransparentFX

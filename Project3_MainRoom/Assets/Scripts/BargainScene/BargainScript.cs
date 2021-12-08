@@ -6,12 +6,19 @@ public class BargainScript : MonoBehaviour
 {
     public Material right, wrong, defaultMaterial;
     public GameObject container;
+    public GameObject greenGate;
 
+    private void Start()
+    {
+        greenGate = GameObject.FindGameObjectWithTag("GreenGate");
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Bargain"))
         {
             gameObject.GetComponent<MeshRenderer>().material = right;
+            greenGate.GetComponent<LoadScene>().canUnload = true;
         } else
         {
             gameObject.GetComponent<MeshRenderer>().material = wrong;

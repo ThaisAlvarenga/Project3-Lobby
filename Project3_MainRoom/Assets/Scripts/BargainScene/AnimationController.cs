@@ -13,16 +13,25 @@ public class AnimationController : MonoBehaviour
         animator = NPC.GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        // find by tag the scene with a tag and set load to true when user is done
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (count == 0)
+        if (count < 1)
         {
-            if (other.CompareTag("Bargain"))
-            {
-                animator.SetBool("isTalking", true);
-                StartCoroutine("NPCTalking");
-            }
             count++;
+            animator.SetBool("isTalking", true);
+            StartCoroutine("NPCTalking");
+            
+            //if (other.CompareTag("Bargain"))
+            //{
+            //    animator.SetBool("isTalking", true);
+            //    StartCoroutine("NPCTalking");
+            //}
+            //count++;
         }
         
     }

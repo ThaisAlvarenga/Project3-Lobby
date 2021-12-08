@@ -14,6 +14,8 @@ public class LoadScene : MonoBehaviour
     public string tags;
     public string tag2;
 
+    public bool canUnload = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +29,21 @@ public class LoadScene : MonoBehaviour
         {
             if (loadScene)
             {
-                SceneManager.LoadScene(destination, LoadSceneMode.Additive);
+                Scene test = SceneManager.GetSceneByName(destination);
+                if (!test.IsValid())
+                {
+                    SceneManager.LoadScene(destination, LoadSceneMode.Additive);
+                }
                 loadScene = false;
             }
         }
 
         else if (other.gameObject.CompareTag(tag2) && !loadScene)
         {
-            SceneManager.UnloadSceneAsync(destination);
+            if (canUnload)
+            {
+                SceneManager.UnloadSceneAsync(destination);
+            }
             loadScene = true;
         }
 
